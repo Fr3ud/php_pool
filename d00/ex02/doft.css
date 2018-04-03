@@ -28,11 +28,12 @@ body {
 }
 
 .reload {
-    display: inline-block;
     width: 20px;
+    margin: 9px 9px 0 0;
+    display: inline-block;
     float: right;
-    margin-top: 9px;
-    margin-right: 9px;
+    /*margin-top: 9px;*/
+    /*margin-right: 9px;*/
 }
 
 .reload__img {
@@ -40,12 +41,13 @@ body {
 }
 
 .close {
+    width: 20px;
+    margin: 106px 0 0 943px;
     position: absolute;
     display: inline-block;
     float: right;
-    width: 20px;
-    margin-top: 106px;
-    margin-left: 943px;
+    /*margin-top: 106px;*/
+    /*margin-left: 943px;*/
 }
 
 .close__img {
@@ -53,16 +55,17 @@ body {
 }
 
 .loupe {
+    margin: 9px 0 0 0;
     display: inline-block;
     float: right;
-    margin-top: 9px;
 }
 
 .left {
     width: 140px;
     height: 425px;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin: 20px 0 0 30px;
+    /*margin-left: 30px;*/
+    /*margin-top: 20px;*/
     display: inline-block;
     float: left;
     background-color: #909090;
@@ -82,8 +85,8 @@ body {
 
 
 ul {
-    padding: 0;
     margin-left: 32px;
+    padding: 0;
     list-style: none;
 }
 
@@ -97,33 +100,32 @@ li img {
 }
 
 .eye {
-    border: 5px solid red;
     margin: -5px 0 1px -5px;
+    border: 5px solid red;
     border-radius: 5px;
 }
 
 .center {
     width: 1020px;
     height: 583px;
-    margin-left: 30px;
-    margin-top: -4px;
+    margin: -4px 0 0 30px;
+    /*margin-left: 30px;*/
+    /*margin-top: -4px;*/
     display: inline-block;
     float: left;
-    background-color: #909090;
     text-align: center;
+    background-color: #909090;
     border-radius: 10px;
     box-shadow: 9px 9px 15px black;
 }
 .center img {
-    margin-top: 10px;
+    margin: 10px 0 0 0;
 }
 
 .brick {
-    background-image: url(resources/brick.jpg);
-    background-position: left bottom;
-    background-repeat: repeat;
     height: 60px;
     margin: 5px;
+    background: url(resources/brick.jpg) repeat left bottom;
 }
 
 .strong {
@@ -140,8 +142,7 @@ li img {
     position: absolute;
     bottom: -200px;
     padding: 10px;
-    font-family: arial;
-    font-size: 16px;
+    font: 16px arial, serif;
     letter-spacing: 1px;
     background-color: #88ff89;
     border-radius: 10px;
@@ -149,20 +150,20 @@ li img {
 }
 
 .text{
-    margin-left: 2px;
     width: 376px;
+    height: 15px;
+    margin: 0 0 0 2px;
     border: 2px solid #9d969d;
     border-bottom-color: #eeeeee;
     border-right-color: #eeeeee;
-    height: 15px;
 }
 
 .submit {
-    border: 1px solid #a8a4a5;
-    border-radius: 1px;
-    margin-left: 4px;
     height: 22px;
-    font-size:12px;
+    margin: 0 0 0 4px;
+    font-size: 12px;
     letter-spacing: 1px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4eff3), to(#dcdcdc));
+    border: 1px solid #a8a4a5;
+    border-radius: 1px;
 }
