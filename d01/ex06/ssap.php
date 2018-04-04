@@ -8,7 +8,11 @@
 
     $result = array();
     for ($i = 1; $i < $argc; $i++)
-        $result = array_merge($result, ft_split($argv[$i]));
+    {
+        $tmp = ft_split($argv[$i]);
+        foreach ($tmp as $item)
+            $result[] = $item;
+    }
     sort($result);
     foreach ($result as $item)
         echo $item . "\n";
