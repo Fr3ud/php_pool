@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-
 function erup_str($str)
 {
     $result = preg_replace('/ {2,}/', ' ', trim($str));
