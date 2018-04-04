@@ -1,7 +1,16 @@
+#!/usr/bin/php
 <?php
-/**
- * Created by PhpStorm.
- * User: apavelko
- * Date: 4/3/18
- * Time: 6:27 PM
- */
+    function ft_split($str)
+    {
+        $arr = array_diff(explode(' ', $str), array(''));
+        return $arr;
+    }
+    if ($argc > 1)
+    {
+    $arr = ft_split($argv[1]);
+        foreach ($arr as $key => $item)
+            if ($key != 0)
+                echo $item . ' ';
+        echo $arr[0] . "\n";
+    }
+
