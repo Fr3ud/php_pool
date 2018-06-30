@@ -10,13 +10,13 @@ $(document).ready(function(){
 
 function newTodo() {
     const name = prompt("Please enter a name of new TO DO:");
-    if (name !== '') {
+    if (name != '') {
         add(name);
     }
 }
 
 function add(name) {
-    if (name !== '') {
+    if (name != '') {
         $('#ft_list').prepend($('<div>' + name + '</div>').click(del));
         addCookies(name);
     }
