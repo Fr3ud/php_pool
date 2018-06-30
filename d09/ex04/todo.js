@@ -19,12 +19,12 @@ $(document).ready(function() {
 
 function newTodo() {
     const name = prompt("Please enter a name of new TODO:");
-    if (name != '')
+    if (name != '' && name != null)
         add(name);
 }
 
 function add(name) {
-    if (name != '')
+    if (name != '' && name != null)
         $('#ft_list').prepend($(`<div>${name}</div>`).click(del));
     $.ajax({
         type: "GET",
@@ -33,7 +33,7 @@ function add(name) {
 }
 
 function add_old(name) {
-    if (name != '')
+    if (name != '' && name != null)
         $('#ft_list').prepend($(`<div>${name}</div>`).click(del));
 }
 
@@ -49,7 +49,6 @@ function delCsv(name) {
         type: "GET",
         url: `delete.php?${name}=${name}`,
         success: function () {
-            console.log(`del ${name}`);
         }
     });
 }

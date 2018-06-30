@@ -10,14 +10,14 @@ $(document).ready(function(){
 
 function newTodo() {
     const name = prompt("Please enter a name of new TO DO:");
-    if (name != '') {
+    if (name != '' && name != null) {
         add(name);
     }
 }
 
 function add(name) {
-    if (name != '') {
-        $('#ft_list').prepend($('<div>' + name + '</div>').click(del));
+    if (name != '' && name != null) {
+        $('#ft_list').prepend($(`<div>${name}</div>`).click(del));
         addCookies(name);
     }
 }
@@ -30,9 +30,9 @@ function del() {
 }
 
 function addCookies(name) {
-    document.cookie = name + "=" + name + ";";
+    document.cookie = `${name}=${name};`;
 }
 
 function delCookies(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
 }

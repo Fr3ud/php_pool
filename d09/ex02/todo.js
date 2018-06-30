@@ -12,13 +12,13 @@ window.onload = function() {
 
 function newTodo() {
     let name = prompt("Please enter a name of new TO DO:");
-    if (name !== '') {
+    if (name != '' && name != null) {
         add(name);
     }
 }
 
 function add(name) {
-    if (name !== '') {
+    if (name != '' && name != null) {
         const node = document.createElement("DIV");
         const textnode = document.createTextNode(name);
         node.appendChild(textnode);
@@ -39,9 +39,9 @@ function del() {
 }
 
 function addCookies(name) {
-    document.cookie = name + "=" + name + ";";
+    document.cookie = `${name}=${name};`;
 }
 
 function delCookies(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
 }
