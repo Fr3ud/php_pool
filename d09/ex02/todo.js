@@ -1,15 +1,17 @@
 window.onload = function() {
-    var arr = document.cookie.split(';');
+    const arr = document.cookie.split(';');
     if (Array.isArray(arr) && arr[0] !== '') {
-        for (var i = 0; i < arr.length; i++) {
-            var tmp = arr[i].split('=');
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+            let tmp = arr[i].split('=');
+            console.log(tmp);
             add(tmp[1]);
         }
     }
 };
 
 function newTodo() {
-    var name = prompt("Please enter a name of new TO DO:");
+    let name = prompt("Please enter a name of new TO DO:");
     if (name !== '') {
         add(name);
     }
@@ -17,8 +19,8 @@ function newTodo() {
 
 function add(name) {
     if (name !== '') {
-        var node = document.createElement("DIV");
-        var textnode = document.createTextNode(name);
+        const node = document.createElement("DIV");
+        const textnode = document.createTextNode(name);
         node.appendChild(textnode);
         node.addEventListener("click", del);
         node.addEventListener("click", function() {
