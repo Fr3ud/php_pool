@@ -13,16 +13,17 @@
         }
     </style>
     <script>
-        var size = 200;
-        var color = ["red", "green", "blue"];
-        var index = 0;
+        const color = ["red", "green", "blue"];
         var balloon;
+        var index = 0;
+        var size = 200;
 
         $(document).ready(function() {
             balloon = $('#balloon');
             balloon.click(balloonClick);
             balloon.mouseleave(balloonHover);
-        })
+        });
+
         function balloonHover() {
             size -= 5;
             if (size < 200) {
@@ -34,6 +35,7 @@
             }
             balloonRefresh(index);
         }
+
         function balloonClick() {
             size += 10;
             if (size > 420) {
@@ -45,6 +47,7 @@
             }
             balloonRefresh(index);
         }
+
         function balloonRefresh(index){
             balloon.css('height', size);
             balloon.css('width', size);

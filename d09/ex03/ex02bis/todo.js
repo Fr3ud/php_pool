@@ -1,15 +1,15 @@
 $(document).ready(function(){
-    var arr = document.cookie.split(';');
+    const arr = document.cookie.split(';');
     if (Array.isArray(arr) && arr[0] !== '') {
-        for (var i = 0; i < arr.length; i++) {
-            var tmp = arr[i].split('=');
+        for (let i = 0; i < arr.length; i++) {
+            let tmp = arr[i].split('=');
             add(tmp[1]);
         }
     }
-})
+});
 
 function newTodo() {
-    var name = prompt("Please enter a name of new TO DO:");
+    const name = prompt("Please enter a name of new TO DO:");
     if (name !== '') {
         add(name);
     }

@@ -7,9 +7,10 @@
     <script>
     	$(document).ready(function() {
             setInterval("alert('Please, use me...')", 30000)
-    	})
+    	});
+
     	function calc(form) {
-    		var op = form.elements["op"].value;
+    		const op = form.elements["op"].value;
     		var v1 = form.elements["v1"].value;
     		var v2 = form.elements["v2"].value;
     		if (!isInt(v1) || !isInt(v2)) {
